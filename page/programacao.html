@@ -1,0 +1,45 @@
+<!-- <?php 
+    include 'oficina.php';
+    $oficina = new Oficina($conn);
+    $oficinas = $oficina->exibirOficina();
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+
+</head>
+<body>  
+<ul>
+  <li><a href="../index.html">Home</a></li>
+  <li><a class="active" href="#">Programação</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+</ul>
+
+  <h1>Oficinas</h1>
+  
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Oficina</th>
+    <th>Palestrante</th>
+    <th>Inscrição</th>
+  </tr>
+  <!-- <?php foreach($oficinas as $oficina) {?>
+    <tr>
+      <td><?php echo $oficina['data']; ?></td>
+      <td><?php echo $oficina['oficina'];?></td>
+      <td><?php echo $oficina['palestrante']; ?></td>
+      <td><button>Inscrição</button></td>
+    </tr>
+  <?php  } ?> -->
+</table>
+
+</body>
+</html>
