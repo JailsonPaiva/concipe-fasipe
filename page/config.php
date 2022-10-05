@@ -1,6 +1,6 @@
 <?php
   //$conn = new mysqli('localhost','root','','concipe');
-  $conn = new mysqli('concipe.com.br','concipecom_cuiaba',')haqi!3Mz6zV','concipecom_cuiaba');
+  $conn = new mysqli();
   $conn->set_charset('utf8');
 
   if($conn == TRUE){
