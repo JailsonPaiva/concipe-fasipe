@@ -14,7 +14,15 @@ if(isset($_POST)) {
         $sql = $pdo->prepare($sql);
         $sql->bindParam(':RA', $RA, PDO::PARAM_STR);
         $sql->execute();
-        $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $res_sql = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        if(count($res_sql) > 0) {
+            $resultado = $res_sql[0];
+            print_r($resultado);
+        } else {
+            echo "Error";
+            header("Location: NoFound.php");
+        }
 
     } elseif ( $turma == '765') {
         // INNER JOIN Das tableas ALUNOS e INSCRITOS_765
@@ -25,22 +33,20 @@ if(isset($_POST)) {
         $sql->bindParam(':RA', $RA, PDO::PARAM_STR);
         $sql->execute();
         $res_sql = $sql->fetchAll(PDO::FETCH_ASSOC);
+        print_r($res_sql);
 
-        $resultado = $res_sql[0];
+        if(count($res_sql) > 0) {
+            $resultado = $res_sql[0];
+            print_r($resultado);
+        } else {
+            echo "Error";
+            header("Location: NoFound.php");
+        }
 
-        print_r($resultado);
-
-    } else {
-        echo 'Aluno não encontrado.';
     };
 
-
-    
-
-
-
-} else {
-    echo 'Digite um RA';
+} elseif(!$_POST == null) {
+    header("Location: index.php");
 };
 
 
