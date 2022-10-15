@@ -15,6 +15,21 @@
 
        <input type="text" name="RA" placeholder="Digite aqui">
 
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Seleione o seu curso</option>
+            <option value="765">Análise de Sistemas</option>
+            <option value="765">Biomedicina</option>
+            <option value="765">Enfermagem</option>
+            <option value="765">Fisioterapia</option>
+            <option value="765">Nutrição</option>
+            <option value="765">Odontologia</option>
+
+            <option value="764">Direito</option>
+            <option value="764">Contabilidade</option>
+            <option value="764">Administração</option>
+            <option value="764">Psicologia</option>
+        </select>   
+
        <button type="submit">buscar</button>
     </form>
 

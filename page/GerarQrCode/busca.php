@@ -1,23 +1,46 @@
 <?php
 
-if(!isset($_GET['RA'])) {
-    header("Location: index.php");
-    exit;
-}
+if(isset($_GET['RA'])) {
 
-$RA = "%".trim($_GET['RA'])."%";    
+    // CONFIG E QUERY DE BUSCA NO BANCO
+    $pdo = new PDO('mysql: host=localhost; dbname=concipe', 'root', '');
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+    
+    try {
+        $RA = "%".trim($_GET['RA'])."%";    
 
-// CONFIG E QUERY DE BUSCA NO BANCO
+        if($RA == '764') {
+                    
+            $sql = "SELECT * FROM inscritos_764 WHERE RA LIKE :RA";
+            $sql = $pdo->prepare($sql);
+            $sql->bindParam(':RA', $RA, PDO::PARAM_STR);
+            $sql->execute();
+            $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+            echo $resultado;
 
-$pdo = new PDO('mysql: host=localhost; dbname=concipe', 'root', '');
-$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-$sql = "SELECT * FROM alunos WHERE RA LIKE :RA";
-$sql = $pdo->prepare($sql);
+        } elseif ($RA == '765') {
 
-$sql->bindParam(':RA', $RA, PDO::PARAM_STR);
-$sql->execute();
+            $sql = "SELECT * FROM inscritos_765 WHERE RA LIKE :RA";
+            $sql = $pdo->prepare($sql);
+            $sql->bindParam(':RA', $RA, PDO::PARAM_STR);
+            $sql->execute();
+            $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+            echo $resultado;
+
+        } else {
+            echo 'Aluno não encontrado.';
+        };
+
+
+    } catch(PDOException $e) {
+        echo "Error: " . $e;
+    };
+
+
+
+};
+
 
 // print_r($resultado);
 ?>
