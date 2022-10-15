@@ -1,44 +1,46 @@
 <?php
 
-if(isset($_GET['RA'])) {
+if(isset($_POST)) {
+    $turma = trim($_POST['turma']);
 
     // CONFIG E QUERY DE BUSCA NO BANCO
     $pdo = new PDO('mysql: host=localhost; dbname=concipe', 'root', '');
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-    
-    try {
-        $RA = "%".trim($_GET['RA'])."%";    
+    $RA = trim($_POST['RA']);
 
-        if($RA == '764') {
-                    
-            $sql = "SELECT * FROM inscritos_764 WHERE RA LIKE :RA";
-            $sql = $pdo->prepare($sql);
-            $sql->bindParam(':RA', $RA, PDO::PARAM_STR);
-            $sql->execute();
-            $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
-            echo $resultado;
+    if( $turma == '764') {
+                
+        $sql = "SELECT alunos.aluno, alunos.curso, inscritos_764.ra, inscritos_764.turma FROM inscritos_764 JOIN alunos ON  inscritos_764.ra = alunos.ra WHERE alunos.ra = :RA and inscritos_764.ra = :RA";
+        $sql = $pdo->prepare($sql);
+        $sql->bindParam(':RA', $RA, PDO::PARAM_STR);
+        $sql->execute();
+        $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-        } elseif ($RA == '765') {
+    } elseif ( $turma == '765') {
+        // INNER JOIN Das tableas ALUNOS e INSCRITOS_765
+        // select alunos.aluno, alunos.curso, inscritos_765.ra, inscritos_765.turma from  inscritos_765 join alunos on inscritos_765.ra = alunos.ra where alunos.ra like 60130 and inscritos_765.ra = 60130;
 
-            $sql = "SELECT * FROM inscritos_765 WHERE RA LIKE :RA";
-            $sql = $pdo->prepare($sql);
-            $sql->bindParam(':RA', $RA, PDO::PARAM_STR);
-            $sql->execute();
-            $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $sql = "SELECT alunos.aluno, alunos.curso, inscritos_765.ra, inscritos_765.turma FROM inscritos_765 JOIN alunos ON  inscritos_765.ra = alunos.ra WHERE alunos.ra = :RA and inscritos_765.ra = :RA";
+        $sql = $pdo->prepare($sql);
+        $sql->bindParam(':RA', $RA, PDO::PARAM_STR);
+        $sql->execute();
+        $res_sql = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-            echo $resultado;
+        $resultado = $res_sql[0];
 
-        } else {
-            echo 'Aluno não encontrado.';
-        };
+        print_r($resultado);
 
-
-    } catch(PDOException $e) {
-        echo "Error: " . $e;
+    } else {
+        echo 'Aluno não encontrado.';
     };
 
 
+    
 
+
+
+} else {
+    echo 'Digite um RA';
 };
 
 
@@ -62,32 +64,25 @@ if(isset($_GET['RA'])) {
 <body>
 
     <h2>
-        <?php echo $resultado[0]['Aluno']?>
+        <?php echo $resultado['aluno']?>
     </h2>
     <h3>
-        <?php echo $resultado[0]['Curso']?>
+        <?php echo $resultado['curso']?>
     </h3>
     
-    <?php
-        foreach($resultado as $value) {
-            ?>
-            <div>
-                <div id="qrcode<?php echo $value['RA']?>"></div>
-                <input type="hidden" name="dados" id="dados" value="<?php echo $data = $value['RA'].' '.$value['Aluno'];
-                ?>">
 
-            </div>
+        <div>
+            <div id="qrcode<?php echo $resultado['ra']?>"></div>
+            <input type="hidden" name="dados" id="dados" value="<?php echo $data = $resultado['aluno'].' '.$resultado['ra']. ' '.$resultado['turma'];
+            ?>">
+        </div>
 
-            <script>
-                let dados = document.querySelector('#dados');
-                console.log(dados.value)
-                const qrc = new QRCode(document.getElementById('qrcode<?php echo $value['RA']?>'));
-                qrc.makeCode(dados.value);
-
-            </script>
-            <?php
-        }
-    ?>
+        <script>
+            let dados = document.querySelector('#dados');
+            console.log(dados.value)
+            const qrc = new QRCode(document.getElementById('qrcode<?php echo $resultado['ra']?>'));
+            qrc.makeCode(dados.value);
+        </script>
 
     <a href="../../index.html" class="btn-home">Home</a>
 

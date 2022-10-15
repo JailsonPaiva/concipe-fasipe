@@ -10,12 +10,12 @@
 
     <h2>Gerar QrCode</h2>
     
-    <form action="busca.php" method="GET">
+    <form action="busca.php" method="POST">
         <label>RA do aluno</label>
 
        <input type="text" name="RA" placeholder="Digite aqui">
 
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example" name="turma">
             <option selected>Seleione o seu curso</option>
             <option value="765">Análise de Sistemas</option>
             <option value="765">Biomedicina</option>
