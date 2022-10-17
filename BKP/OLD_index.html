@@ -1,0 +1,137 @@
+<?php
+    include 'page/config.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONCIPE 2022</title>
+
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/bg.css">
+  <link rel="stylesheet" href="css/relogio.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/button.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/responsive.css" /> -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="/js/cronometro.js"></script>
+  <script src="/js/mobilenav.js"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <a class="logo" href="/">FASIPE CUIABÁ</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="page/programacao.html">Programação</a></li>
+        <li><a href="page/contact.html">Contact</a></li>
+        <li><a href="page/about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Logo Fasipe 
+  <div id="imgFasiPos">
+
+    <CENTER><img src="img/fasipe-cuiaba.png" class="img-responsive" width="250px" alt="fasipe-cuiaba"></CENTER>
+  </div>-->
+
+  <div class="containerConcipe">
+    <img src="img/CONCIPE4.png" class="img-responsive" width="600" height="500" alt="CONCIPE4">
+  </div>
+
+  <!-- Imagem Desc Julio  -->
+  <div class="divjuliotxt">
+    <img src="img/julio2.png" class="img-responsive" width="600" height="500" id="julioimg" alt="julio2">
+    <div class="divjuliotxtp">
+      <p>Júlio Damião foi escolhido para à presidência da diretoria executiva da entidade nos próximos dois anos
+        (2021-2023). O executivo é formado em Administração de Empresas com pós-graduações em finanças corporativas
+        (Newton Paiva), especialização em gestão – ênfase em finanças (Fundação Dom Cabral).
+        Profissional com mais de 10 anos de experiência na área financeira
+        de grandes empresas multinacionais do varejo e indústrias da área médica (VMI). Atualmente é CFO do grupo
+        Prime Holding, empresa com grandes investimentos no setor industrial médico, com produtos em todo Brasil
+        equipamentos de segurança para portos, aeroportos, exportando equipamentos brasileiros para mais de 40 países.
+        (VMI Security).</p>
+      
+    </div>
+
+    <div class="btn">
+      <a href="https://fasipe.mentorweb.ws/fasipe/inspos/detalhecurso.do?evento=exibir&turmaID=13915&inscricaoOpcaoID=239" class="neon-btn">Inscreva-se</a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="container">
+    <!-- Relogio Timer -->
+
+    <div class="containerRelogio">
+      <h1 >DIAS RESTANTES PARA O EVENTO</h1>
+      <div class="relogio" id="relogioPos">
+        <div>
+          <span id="days" 00></span>
+          <span class="tempo">Dias</span>
+        </div>
+        <div>
+          <span id="hours">00</span>
+          <span class="tempo">Horas</span>
+        </div>
+        <div>
+          <span id="minutes">00</span>
+          <span class="tempo">Minutos</span>
+        </div>
+        <div>
+          <span id="seconds">00</span>
+          <span class="tempo">Segundos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <main></main>
+
+
+      <!-- RODAPE  -->
+
+  <div class="containerRodape">
+
+
+    <div id="containerRodapeA">
+      <h1>Localização</h1>
+      <h3>Hotel Fazenda Mato Grosso</h3>
+      <br>
+      <p>R. Antônio Dorileo - 1100</p>
+      <p>Coxipó, Cuiabá - MT</p>
+      <p>78085-230</p>
+
+    </div>
+
+    <div id="containerRodapeB">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15368.78751911634!2d-56.0651462!3d-15.634501!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc806433d9fe80c69!2sHotel%20Fazenda%20Mato%20Grosso!5e0!3m2!1spt-BR!2sbr!4v1665607938664!5m2!1spt-BR!2sbr"
+        width="400" height="250" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

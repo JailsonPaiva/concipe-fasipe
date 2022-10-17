@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@700;900&family=Secular+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Secular One', sans-serif;
+}
+
+/* table {
+  font-family: 'Secular One', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+h1 {
+  text-align: center;
+} */
+
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  } */
+
+
+body {
+  height: 100hv;
+
+  /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+
+/* ESTILO CONCIPE 2020 */
+
+.containerConcipe {
+  /* background: rgb(255, 255, 255); */
+  width: 100%;
+  height: 430px;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* border: 1px solid #fff; */
+}
+
+
+
+.containerSpace {
+  width: 100%;
+  height: 350px;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* border: 1px solid #fff; */
+}
+
+
+
+.divjuliotxt {
+  color: aliceblue;
+  width: 100%;
+  height: 1400px;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* border: 1px solid #fff; */
+
+}
+
+.divjuliotxt p {
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+
+}
+
+.divjuliotxtp {
+  color: aliceblue;
+  width: 50%;
+  height: 500px;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* border: 1px solid #fff; */
+}
+
+
+.btn {
+  width: 100%;
+  height: 150px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ 
+   /* border: 1px solid #fff; */
+ }
+
+
+
+.containerRelogio {
+  color: aliceblue;
+  width: 100%;
+  height: 250px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #fff; */
+
+}
+
+.containerRodape {
+ width: 100%;
+ height: 350px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: black;
+
+  /* border: 1px solid #fff; */
+}
+
+
+.containerRodape{
+  display: flex;
+}
+
+
+
+#containerRodapeA {
+  color: aliceblue;
+  width: 40%;
+  align-items: flex-start;
+  justify-content: left;
+
+  /* border: 1px solid #fff; */
+}
+
+#containerRodapeB {
+  color: aliceblue;
+  width: 55%;
+  align-items: flex-end;
+  justify-content: right;
+
+  /* border: 1px solid #fff; */
+}
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (max-width: 800px) {
+  .divjuliotxt>p {
+    font-size: 0.6rem;
+  }
+}
+
+
+
+
+@media screen and (max-width: 607px) {
+  .listDesc>h2 {
+    font-size: 1.7rem;
+  }
+
+  .listDesc>ul li {
+    font-size: .44rem;
+  }
+
+
+  .cipe2022 {
+    padding-left: 3.8rem;
+  }
+
+  .cipe2022>h2 {
+    font-size: 1.7rem;
+  }
+}
+
+
+@media screen and (max-width: 518px) {
+  .listDesc {
+    width: 80%;
+  }
+
+  .listDesc>h2 {
+    font-size: 1.5rem;
+  }
+
+  .listDesc>ul li {
+    font-size: .4rem;
+  }
+
+  .cipe2022 {
+    width: 80%;
+    padding-left: 3.5rem;
+  }
+
+  .cipe2022>h2 {
+    font-size: 1.5rem;
+  }
+
+}  */
