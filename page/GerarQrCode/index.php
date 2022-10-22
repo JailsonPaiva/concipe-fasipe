@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>teste qrcode</title>
+</head>
+<body>
+
+    <h2>Gerar QrCode</h2>
+    
+    <form action="busca.php" method="POST">
+=======
 
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -47,6 +56,7 @@
 
     
     <!-- <form action="busca.php" method="POST">
+>>>>>>> 8c13bea0129e869b84878b7ba77c32eaca4ccbad
         <label>RA do aluno</label>
 
        <input type="text" name="RA" placeholder="Digite aqui">
@@ -67,6 +77,8 @@
         </select>   
 
        <button type="submit">buscar</button>
+<<<<<<< HEAD
+=======
     </form> -->
 
 
@@ -110,6 +122,7 @@
         </div>
         
         </fieldset>
+>>>>>>> 8c13bea0129e869b84878b7ba77c32eaca4ccbad
     </form>
 
 </body>

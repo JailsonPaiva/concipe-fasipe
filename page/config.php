@@ -1,5 +1,6 @@
 <?php
-  $conn = new mysqli('localhost','root','','concipe');
+  //$conn = new mysqli('localhost','root','','concipe');
+  $conn = new mysqli();
   $conn->set_charset('utf8');
 
   if($conn == TRUE){
