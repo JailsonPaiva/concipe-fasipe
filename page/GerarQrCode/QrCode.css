@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+
+}
+
+.container-qr-code {
+    width: 100%;
+    height: 85%;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    /* border: 1px solid red; */
+}
+
+.background-qr-code {
+    /* width: 70%; */
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    border: 1px solid;
+}
+
+.info-aluno {
+    text-align: center;
+    padding: 0 1rem;
+
+    /* border: 1px solid blue ; */
+}
+
+.info-aluno > h2 {
+    margin-bottom: 1rem;
+}
